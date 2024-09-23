@@ -7,7 +7,7 @@ SRC = Soal_1.cpp
 # Default target: compile the program
 all: Soal_1
 
-# Compile the Soal_1.txt
+# Compile the Soal_1.cpp
 Soal_1: Soal_1.cpp
 	g++ -Wall -o Soal_1 Soal_1.cpp
 
