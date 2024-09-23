@@ -1,4 +1,5 @@
 #include <iostream> // menyertakan perpustakaan iostream untuk fungsi output dan input
+#include <cmath> // menyertakan perpustakaan cmath untuk fungsi matematika
 using namespace std; // mengaktifkan rentang nama fungsi std::cout dan std::cin
 
 int main () // kepala fungsi
