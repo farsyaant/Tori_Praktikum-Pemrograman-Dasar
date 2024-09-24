@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void multiplicationTable(int n) {
+void tabelPerkalian(int n){
     for (int i = 1; i <= 10; i++) {
         cout << n << " x " << i << " = " << n * i << endl;
     }
@@ -9,8 +9,8 @@ void multiplicationTable(int n) {
 
 int main() {
     int n;
-    cout << "Enter an integer: ";
+    cout << "Input: ";
     cin >> n;
-    multiplicationTable(n);
+    tabelPerkalian(n);
     return 0;
 }
