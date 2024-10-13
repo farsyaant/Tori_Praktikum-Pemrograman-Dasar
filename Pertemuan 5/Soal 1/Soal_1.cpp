@@ -24,4 +24,5 @@ int main() {
     for (const string& output: result) {
     cout << output << " ";
     }
+    return 0;
 }
