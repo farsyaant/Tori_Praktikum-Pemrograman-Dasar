@@ -5,7 +5,6 @@ using namespace std;
 
 string Soal_1(int n) {
 	string result;
-	int n;
 	
 	for (int i=1; i <= n; ++i ){
 		result += " " ;
@@ -14,9 +13,8 @@ string Soal_1(int n) {
 	return result;
 }
 
-
 int main()
-{	ifstream testFile("Test.txt);
+{	ifstream testFile("Test.txt");
  	int input;
     	string expected_output;
 
