@@ -3,11 +3,11 @@
 #include <string>
 using namespace std;
 
-string Soal_1(int n) {
-	string result;
+int Soal_1(int n) {
+	int result;
 	
 	for (int i=1; i <= n; ++i ){
-		result += " " ;
+		result += i ;
 	}
 
 	return result;
@@ -25,8 +25,9 @@ int main()
 
     int test_num = 1;
     while (testFile >> input && std::getline(testFile >> std::ws, expected_output)) {
-        std::string output = Soal_1(input);
-        if (output == expected_output) {
+        int output = Soal_1(input);
+        string output_str = to_string(output);
+        if (output_str == expected_output) {
             std::cout << "Test " << test_num << " passed!" << std::endl;
         } else {
             std::cout << "Test " << test_num << " failed. Expected: \"" 
