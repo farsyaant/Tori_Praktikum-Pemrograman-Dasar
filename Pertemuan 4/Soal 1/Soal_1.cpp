@@ -19,19 +19,19 @@ int main()
     	string expected_output;
 
     if (!testFile) {
-        std::cerr << "Error: Could not open test.txt" << std::endl;
+        cerr << "Error: Could not open test.txt" << endl;
         return 1;
     }
 
     int test_num = 1;
-    while (testFile >> input && std::getline(testFile >> std::ws, expected_output)) {
+    while (testFile >> input && std::getline(testFile >> ws, expected_output)) {
         int output = Soal_1(input);
         string output_str = to_string(output);
         if (output_str == expected_output) {
-            std::cout << "Test " << test_num << " passed!" << std::endl;
+            cout << "Test " << test_num << " passed!" << endl;
         } else {
             std::cout << "Test " << test_num << " failed. Expected: \"" 
-                      << expected_output << "\", Got: \"" << output << "\"" << std::endl;
+                      << expected_output << "\", Got: \"" << output << "\"" << endl;
         }
         test_num++;
     }
