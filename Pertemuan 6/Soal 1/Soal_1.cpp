@@ -1,6 +1,6 @@
-
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 struct Barang {
@@ -9,33 +9,21 @@ struct Barang {
         int jumlah;
         double harga;
 };
-  string Soal_1(int n) {
+
+  string Soal_1(int n, Barang brg[]) {
         int totalBarang = 0;
         double totalHarga = 0, rerataHarga = 0;
         
-        Barang brg[50];
         for (int i = 0; i < n; i++) {
-        cout << "Barang ke-" << i+1 << ":" << endl;
-        cout << "Kode barang: "; cin >> brg[i].kode;
-        cout << "Nama barang: "; cin >> brg[i].nama;
-        cout << "Jumlah barang: "; cin >> brg[i].jumlah;
-        cout << "Harga barang: Rp"; cin >> brg[i].harga;
-        cout << endl;
-        
         totalBarang += brg[i].jumlah;
         totalHarga += brg[i].jumlah * brg[i].harga;
-        rerataHarga = totalHarga/totalBarang;
         }
 
-        string result = "Jumlah barang = " + to_string(totalBarang) + endl;
-          result += "Harga rata-rata barang = Rp" + to_string(static_cast<int>(rerataHarga)) + endl;
-        }
-        
-        else {
-            cout << "Banyak jenis barang harus di antara 1--50" << endl;
-        }
-    return result;
-}
+        rerataHarga = totalHarga/totalBarang;
+        string result = "Jumlah barang = " + to_string(totalBarang) + "\n"; 
+          result += "Harga rata-rata barang = Rp" + to_string(static_cast<int>(rerataHarga)) + "\n"; 
+          return result;
+    }
 
   int main() {
     ifstream testFile("Test.txt");
@@ -48,14 +36,17 @@ struct Barang {
 
     int test_num = 1;
     while (testFile >> n) { 
-        vector<int> input(n);
+        Barang input[50];
         for (int i = 0; i < n; i++) {
-            testFile >> input[i];  
+            testFile >> input[i].kode >> input[i].nama >> input[i].jumlah >> input[i].harga;
         }
 
-        string expected_output;
         testFile.ignore();  
-        getline(testFile, expected_output);
+        string expected_output_line1, expected_output_line2;
+        getline(testFile, expected_output_line1);
+        getline(testFile, expected_output_line2);
+
+        string expected_output = expected_output_line1 + "\n" + expected_output_line2 + "\n";
 
         string output = Soal_1(n, input); 
         if (output == expected_output) {
@@ -69,7 +60,6 @@ struct Barang {
 
     testFile.close();
     return 0;
-}
+} 
 
-        
-     
+
