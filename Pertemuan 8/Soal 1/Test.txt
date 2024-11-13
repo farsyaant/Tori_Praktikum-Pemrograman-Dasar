@@ -1,1 +1,3 @@
-
+5 Bilangan Fibonacci ke-5 adalah: 5
+4 Bilangan Fibonacci ke-4 adalah: 3
+3 Bilangan Fibonacci ke-3 adalah: 2
