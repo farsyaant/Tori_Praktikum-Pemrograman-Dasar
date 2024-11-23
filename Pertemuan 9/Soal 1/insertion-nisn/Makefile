@@ -1,23 +1,23 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = insertion_nisn
-SRC = insertion_nisn.cpp
+TARGET = insertion-nisn
+SRC = insertion-nisn.cpp
 
 # Default target: compile the program
-all: insertion_nisn
+all: insertion-nisn
 
-# Compile the insertion_nisn.cpp
-insertion_nisn: insertion_nisn.cpp
-	g++ -Wall -o insertion_nisn insertion_nisn.cpp
+# Compile the insertion-nisn.cpp
+insertion-nisn: insertion-nisn.cpp
+	g++ -Wall -o insertion-nisn insertion-nisn.cpp
 
 # Run the program in test mode (using test.txt)
-test: insertion_nisn
-	./insertion_nisn test
+test: insertion-nisn
+	./insertion-nisn test
 
 # Clean up the compiled files
 clean:
-	rm -f insertion_nisn
+	rm -f insertion-nisn
 
 # Phony targets to avoid conflicts
 .PHONY: all clean test
