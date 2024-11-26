@@ -1,22 +1,23 @@
-#Variable
+# Variables
 CXX = g++
 CXXFLAGS = -Wall
 TARGET = Soal_5
 SRC = Soal_5.cpp
 
-#Compiletheprogram
+# Default target: compile the program
 all: Soal_5
 
-#CompiletheSoal_5.cpp
+# Compile the Soal_5.cpp
 Soal_5: Soal_5.cpp
-        g++ -Wall -o Soal_5 Soal_5.cpp
+	g++ -Wall -o Soal_5 Soal_5.cpp
 
-#Runtest
+# Run the program in test mode 
 test: Soal_5
-      ./Soal_5 test
+	./Soal_5 test
 
-#Clean 
-clean: rm -f Soal_5 
-
-#Phonytoavoidconflicts
+# Clean up the compiled files
+clean:
+	rm -f Soal_5
+ 
+# Phony targets to avoid conflicts
 .PHONY: all clean test
