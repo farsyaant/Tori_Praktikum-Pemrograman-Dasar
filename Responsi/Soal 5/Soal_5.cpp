@@ -3,19 +3,26 @@
 using namespace std;
 
 int main() {
-    int n, num, digit, rev = 0;
+    int num, digit, rev = 0;
     
-    string bil[1] = {"12321"};
-    string cek[1] = {"Bilangan palindrom."};
+    int n = 12321;
+    string cek = "Bilangan palindrom.";
     
-    bil[0] = num;
+    n = num;
     while (num != 0) {
         digit = num % 10;
         rev = rev * 10 + digit;
         num = num / 10;
     }
     
-    if (cek[0] == bil[0]) {
+    if (rev == num) {
+        bool rev = true;
+    }
+    else {
+        bool rev = false;
+    }
+    
+    if (rev) {
         cout << "Test passed!" << endl;
     }
     else {
