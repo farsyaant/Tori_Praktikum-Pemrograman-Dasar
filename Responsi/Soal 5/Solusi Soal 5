@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, num, digit, rev = 0;
+    
+    cout << "Input bilangan: "; cin >> n;
+    
+    n = num;
+    while (num != 0) {
+        digit = num % 10;
+        rev = rev * 10 + digit;
+        num = num / 10;
+    }
+    
+    if (rev == n) {
+        cout << "Bilangan palindrom." << endl;
+    }
+    else {
+        cout << "Bukan bilangan palindrom." << endl;
+    }
+    
+    return 0;
+}
