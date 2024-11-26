@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Input banyak angka: "; cin >>n;
+    
+    int angka[n];
+    for (int i = 0; i < n; i++) {
+        cout << "Input angka ke-" << i+1 << ": "; cin >> angka[i];
+    }
+    
+    int max = angka[0];
+    for (int i = 0; i < n; i++) {
+        if (max < angka[i]) {
+            max = angka[i];
+        }
+    }
+    
+    cout << "Nilai maksimum dalam daftar: " << max << endl;
+    return 0;
+}
